@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "bahnschrift";
+  src: url("/fonts/bahnschrift.ttf"); /* IE9 Compat Modes */
+}
+body {
+  font-family: "bahnschrift";
+}
+.navbar {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  background-color: #eeeeee;
+}
+.navbar-brand img {
+  max-height: 50px;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #880015;
+}
+.logo {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.logo img {
+  max-width: 90vw;
+}
+/* Menu */
+.menu .title h1 {
+  font-size: 8vh;
+}
+.container .title {
+  margin-top: 5%;
+}
+.menu .container h2 {
+  font-size: 3rem;
+}
+.item-card {
+  padding: 2%;
+  color: #880015;
+}
+.item-card .item {
+  /*border-color: #880015 ;*/
+  border-color: black;
+  border-style: solid;
+  border-width: medium;
+  padding: 5%;
+  background-color: #eeeeee;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.item-card .header {
+  border: #880015 medium solid;
+  margin-bottom: 2.5%;
+  padding: 2%;
+  font-size: 1.5rem;
+}
+.item-card .img {
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+.item-card .img img {
+  width: 100%;
+}
+.item-card .body {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+.item-card .footer {
+  border: #880015 medium solid;
+  padding: 2%;
+  margin-top: auto;
+}
+
+.right {
+  float: right;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Mensajes */
+.modal-dialog .modal-title {
+  color: black;
+}
+
+.modal-dialog .modal-body {
+  color: #880015;
+}
+
+.rs{
+  font-size: 180%;
+}
+.rs .nav-link{
+  padding: 0;
+}
