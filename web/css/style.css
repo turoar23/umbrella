@@ -1,6 +1,7 @@
 @font-face {
   font-family: "bahnschrift";
-  src: url("/fonts/bahnschrift.ttf"); /* IE9 Compat Modes */
+  src: 'Sans-serif', url("/fonts/bahnschrift.woff2"), url("/fonts/bahnschrift.ttf");
+  font-display: swap;
 }
 body {
   font-family: "bahnschrift";
@@ -100,4 +101,35 @@ body {
 }
 .rs .nav-link{
   padding: 0;
+}
+
+.main-logo{
+  height: 95vh;
+}
+footer{
+  background-color: #880015;
+  color: white;
+  margin-top: 1%;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.link,
+.link:hover,
+.link:focus,
+.link:active{
+  text-decoration: none;
+  color: black;
+}
+.link.tel{
+  color: white;
+}
+footer a, footer a:hover, footer a:focus{
+  color: white;
+  text-decoration: none;
+}
+footer ul{
+  list-style: none;
+  text-align: center;
+  padding: 0px;
 }

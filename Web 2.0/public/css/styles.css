@@ -1,0 +1,564 @@
+/*  Carta  */
+@font-face {
+	font-family: grafiti;
+	src: url('../fonts/grafiti/RaphLanokFuture-PvDx.ttf');
+}
+@font-face {
+	font-family: umbrella;
+	src: url('../fonts/MyriadPro-Regular.otf');
+}
+@font-face {
+	font-family: umbrella2;
+	src: url('../fonts/Oferta-do-Dia.ttf');
+}
+.fuente-grafiti {
+	font-family: subway-berlin-std, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+:root {
+	--categorie-burger: #ee2737;
+	--categorie-side: rgb(67, 255, 120);
+	--categorie-drink: rgb(56, 185, 255);
+	--categoire-dessert: yellow;
+}
+body {
+	font-family: umbrella;
+	background-image: url('../img/fondo-ladrillo2.jpg');
+	margin: 0;
+}
+.body-index {
+	align-items: center;
+	display: flex;
+	/* min-height: 90vh; */
+	justify-content: center;
+}
+.btn-order {
+	width: 50%;
+	display: inline-block;
+	margin-bottom: 2rem;
+	/* animation: pulsate 0.6s ease-in-out infinite alternate; */
+}
+.btn-order1 {
+	animation: flicker 4.5s infinite alternate;
+}
+/* .text-neon {
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ee2737,
+		0 0 40px #ee2737, 0 0 50px #ee2737, 0 0 60px #ee2737, 0 0 70px #ee2737;
+} */
+.box-neon {
+	box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #ee2737,
+		0 0 0.8rem #ee2737, 0 0 2.8rem #ee2737, inset 0 0 1.3rem #ee2737;
+}
+.btn-neon {
+	color: #fff;
+	border: 0.2rem solid #fff;
+	border-radius: 2rem;
+	padding: 0.4em;
+	box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #ee2737,
+		0 0 0.8rem #ee2737, 0 0 2.8rem #ee2737, inset 0 0 1.3rem #ee2737;
+	text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #ee2737,
+		0 0 82px #ee2737, 0 0 92px #ee2737, 0 0 102px #ee2737, 0 0 151px #ee2737;
+}
+/* Flickering animation */
+@keyframes flicker {
+	0%,
+	18%,
+	22%,
+	25%,
+	53%,
+	57%,
+	100% {
+		box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #ee2737,
+			0 0 0.8rem #ee2737, 0 0 2.8rem #ee2737, inset 0 0 1.3rem #ee2737;
+		text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+			0 0 42px #ee2737, 0 0 82px #ee2737, 0 0 92px #ee2737,
+			0 0 102px #ee2737, 0 0 151px #ee2737;
+	}
+	20%,
+	24%,
+	55% {
+		/* color: transparent; */
+		box-shadow: none;
+		text-shadow: none;
+	}
+}
+@keyframes pulsate {
+	100% {
+		/* Larger blur radius */
+		box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #ee2737,
+			0 0 0.8rem #ee2737, 0 0 2.8rem #ee2737, inset 0 0 1.3rem #ee2737;
+	}
+	0% {
+		/* A slightly smaller blur radius */
+		box-shadow: 0 0 0.2rem #fff, 0 0 0.19rem #fff, 0 0 1.8rem #ee2737,
+			0 0 0.79rem #ee2737, 0 0 2.6rem #ee2737, inset 0 0 1rem #ee2737;
+	}
+}
+/* -------------- Header -------------- */
+.navbar {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 5;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	overflow: hidden;
+}
+.navbar .logo {
+	width: 18%;
+	margin-left: 10px;
+}
+.navbar .nav-item {
+	float: left;
+	/* display: block; */
+	text-align: center;
+	padding: 14px 10px;
+	text-decoration: none;
+	font-size: 24px;
+	color: white;
+	vertical-align: middle;
+}
+.navbar .nav-item.icon {
+	display: none;
+}
+.navbar .nav-item.icon.icon-custom {
+	width: 24px;
+	height: 24px;
+}
+.navbar .btn-order-nav {
+	font-size: 0.8rem;
+	padding: 8px 10px 5px 10px;
+	font-weight: bold;
+	background-color: white;
+	border-radius: 5%;
+}
+/* The side navigation menu */
+.sidenav {
+	/* opacity: 0;*/
+	display: none;
+	/* transition: 0.3s; */
+}
+.sidenav.show {
+	display: block;
+}
+
+/* The navigation menu links */
+.sidenav a {
+	padding: 8px;
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+	display: block;
+	/* transition: 0.3s; */
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+	color: white;
+}
+
+.sidenav .nuevo{
+	height: 65px;
+	position: absolute;
+	transform: translate(-110px, -2px) rotate(-15deg);
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+}
+
+.sidenav .footer-header {
+	position: absolute;
+	bottom: 1%;
+	display: inline;
+	width: 100%;
+	float: left;
+}
+
+.sidenav .footer-header a {
+	display: inline-block;
+}
+main {
+	text-align: center;
+}
+main.main-index {
+	margin: auto;
+	width: 90%;
+}
+main.main-index .logo {
+	/* position: absolute; */
+	/* margin-top: ; */
+	width: 100%;
+}
+main.main-index .logo img {
+	max-width: 90vw;
+}
+main.main-index .order a {
+	text-decoration: none;
+}
+
+main .carta-content {
+	max-width: 98%;
+	margin: auto;
+	overflow: hidden;
+	padding-top: 20px;
+}
+main .carta-content h2 {
+	font-family: subway-berlin-std, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3rem;
+	margin: 10px;
+}
+main .carta-content h2 {
+	text-shadow: 1px 1px 2px black;
+}
+#burgers h2 {
+	color: var(--categorie-burger);
+}
+#sides h2 {
+	color: var(--categorie-side);
+}
+#drinks h2 {
+	color: var(--categorie-drink);
+}
+#desserts h2 {
+	color: var(--categorie-dessert);
+}
+
+main.main-carta {
+	color: white;
+	/* background-color: black; */
+}
+main.main-carta .nav-categories {
+	width: 100%;
+	max-width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+main.main-carta .nav-categories.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: rgb(0, 0, 0, 0.5);
+	padding: 18px 0px;
+	z-index: 2;
+}
+main.main-carta .nav-categories .categorie {
+	flex: 1;
+	/* text-transform: uppercase; */
+	font-size: 24px;
+}
+main.main-carta .nav-categories .categorie .icon-custom{
+	height: 2.8rem;
+	width: 2.8rem;
+}
+main.main-carta .nav-categories .categorie .icon-custom .icon{
+	fill: white;
+}
+.main-carta .carta-item {
+	width: 90%;
+	margin: auto;
+	/* margin-bottom: 30px; */
+	padding-bottom: 10px;
+}
+.main-carta .carta-item .title {
+	font-size: 1.5rem;
+	margin: 20px 4px;
+}
+.main-carta .carta-item img {
+	/* max-width: 100%; */
+	width: 100%;
+	border-radius: 1% 1% 0% 0%;
+}
+.main-carta .carta-item .sub-categorie {
+	text-align: left;
+}
+.main-carta .carta-item .ingredients ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.main-carta .carta-item .ingredients .price {
+	padding: 0.5rem 0;
+}
+.main-carta .carta-item .ingredients .comentario-content {
+	/* background-color: white; */
+	/* color: black; */
+	font-style: italic;
+	padding: 0.5rem;
+}
+.list-item {
+	padding: 8px;
+}
+.list-item .list-item-name {
+	font-size: 1.7rem;
+}
+.custom-icon{
+	font-size: 2.2rem;
+}
+#burgers .text-neon,
+#nav-burgers .active {
+	/* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #174A5B,
+		0 0 40px #174A5B, 0 0 50px #174A5B,
+		0 0 60px #174A5B, 0 0 70px #174A5B; */
+	text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff,
+		0 0 2rem var(--categorie-burger), 0 0 4rem var(--categorie-burger);
+	/* 0 0 6rem var(--categorie-burger), 0 0 8rem var(--categorie-burger), */
+	/* 0 0 10rem var(--categorie-burger); */
+	/* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--categorie-burger),
+		0 0 40px var(--categorie-burger), 0 0 50px var(--categorie-burger),
+		0 0 60px var(--categorie-burger), 0 0 70px var(--categorie-burger); */
+}
+#sides .text-neon,
+#nav-sides .active {
+	/* text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff,
+	0 0 2rem var(--categorie-side), 0 0 4rem var(--categorie-side),
+	0 0 6rem var(--categorie-side), 0 0 8rem var(--categorie-side),
+	0 0 10rem var(--categorie-side); */
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--categorie-side);
+}
+#sides .neon-tepuy {
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff9c03;
+}
+#drinks .text-neon,
+#nav-drinks .active {
+	text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff,
+		0 0 2rem var(--categorie-drink), 0 0 4rem var(--categorie-drink);
+	/* 0 0 6rem var(--categorie-drink), 0 0 8rem var(--categorie-drink), */
+	/* 0 0 10rem var(--categorie-drink); */
+	/* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--categorie-drink),
+		0 0 40px var(--categorie-drink), 0 0 50px var(--categorie-drink),
+		0 0 60px var(--categorie-drink), 0 0 70px var(--categorie-drink); */
+}
+.carta-burger,
+.carta-side,
+.carta-drink {
+	/* background-color: black; */
+	border: 0.2em solid #fff;
+	border-radius: 2rem;
+}
+.carta-burger {
+	box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff,
+		0 0 2rem var(--categorie-burger), inset 0 0 2rem var(--categorie-burger),
+		0 0 4rem var(--categorie-burger)
+			/*, inset 0 0 4rem var(--categorie-burger)*/;
+	/* box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff,
+		0 0 2rem var(--categorie-burger), 0 0 0.8rem var(--categorie-burger),
+		0 0 2.8rem var(--categorie-burger),
+		inset 0 0 1.3rem var(--categorie-burger); */
+
+	/* border-radius: 2%; */
+	/* border: 1px solid white; */
+}
+.carta-side {
+	box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff,
+		0 0 2rem var(--categorie-side), inset 0 0 2rem var(--categorie-side),
+		0 0 4rem var(--categorie-side);
+	/* box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem var(--categorie-side),
+		0 0 0.8rem var(--categorie-side), 0 0 2.8rem var(--categorie-side),
+		inset 0 0 1.3rem var(--categorie-side); */
+}
+.carta-drink {
+	box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff,
+		0 0 2rem var(--categorie-drink), inset 0 0 2rem var(--categorie-drink),
+		0 0 4rem var(--categorie-drink);
+	/* box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff,
+		0 0 2rem var(--categorie-drink), 0 0 0.8rem var(--categorie-drink),
+		0 0 2.8rem var(--categorie-drink),
+		inset 0 0 1.3rem var(--categorie-drink); */
+}
+.barra-neon-burger {
+	background-color: var(--categorie-burger);
+	height: 1.5px;
+	border: 0.1em solid #fff;
+	border-radius: 1.5rem;
+	width: 85%;
+	margin: auto;
+	box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff,
+		0 0 2rem var(--categorie-burger), 0 0 0.8rem var(--categorie-burger),
+		0 0 2.8rem var(--categorie-burger),
+		inset 0 0 1.3rem var(--categorie-burger);
+}
+.barra-neon-side {
+	background-color: var(--categorie-side);
+	height: 1.5px;
+	border: 0.1em solid #fff;
+	border-radius: 1.5rem;
+	width: 85%;
+	margin: auto;
+	box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff,
+		0 0 2rem var(--categorie-side), 0 0 0.8rem var(--categorie-side),
+		0 0 2.8rem var(--categorie-side),
+		inset 0 0 1.3rem var(--categorie-side);
+}
+.barra-neon-drink {
+	background-color: var(--categorie-burger);
+	height: 1.5px;
+	border: 0.1em solid #fff;
+	border-radius: 1.5rem;
+	width: 85%;
+	margin: auto;
+	box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff,
+		0 0 2rem var(--categorie-drink), 0 0 0.8rem var(--categorie-drink),
+		0 0 2.8rem var(--categorie-drink),
+		inset 0 0 1.3rem var(--categorie-drink);
+}
+.carta-item .burger-content {
+	display: flex;
+	flex-flow: row wrap;
+	width: 98%;
+	margin: auto;
+	padding-top: 1rem;
+}
+.carta-item .burger-content div {
+	float: left;
+}
+.carta-item .burger-content .burger-img {
+	width: 30%;
+}
+.carta-item .burger-content .burger-description {
+	flex: 1;
+	text-align: left;
+	padding-left: 1rem;
+	font-size: 14px;
+}
+.carta-item .burger-content .burger-description .title {
+	margin: 0;
+}
+.carta-item .burger-content .burger-description .price {
+	display: flex;
+	align-items: center;
+}
+.carta-item .burger-content .burger-description .price .fas {
+	font-size: 1.5rem;
+}
+.carta-item .burger-content .burger-description .price ul {
+	padding-left: 0.5rem;
+}
+.carta-item .burger-content .burger-description .price ul li{
+	text-decoration: none;
+	display: block;
+}
+
+/* The Modal (background) */
+.modal-burger {
+	display: none; /* Hidden by default */
+	text-align: center;
+	position: fixed; /* Stay in place */
+	z-index: 9999; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-burger .modal-content {
+	background-image: url('../img/fondo-ladrillo2.jpg');
+	/* background-color: black; */
+	color: white;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	/* width: 100%; */
+	/* height: 100%; */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	animation-name: animatetop;
+	animation-duration: 0.4s;
+}
+.modal-burger .modal-content .burger-img {
+	position: relative;
+	box-shadow: 5px 5px rgb(208, 206, 206);
+	margin-top: 10px;
+	margin-bottom: 20px;
+	margin-left: -5px;
+	border-radius: 0% 5%;
+}
+.modal-burger .modal-content .burger-img img {
+	width: 100%;
+	position: relative;
+	border-radius: 0% 5%;
+}
+/* .modal-burger .modal-content .burger-img .sticker {
+	width: 25%;
+	position: absolute;
+	right: 0;
+} */
+.modal-burger .modal-content .ingredients {
+	margin-bottom: 15px;
+	border: 2px solid #ee2737;
+	padding: 10px;
+	border-radius: 0% 5%;
+}
+
+.modal-burger .modal-content .ingredients .price ul {
+	padding: 0;
+	margin-bottom: 0;
+}
+.modal-burger .modal-content .ingredients .price ul li {
+	text-decoration: none;
+	margin: 0;
+	display: block;
+}
+.modal-burger .modal-content .extras .extras-title{
+	font-size: 1.4rem;
+	font-style: italic;
+}
+.modal-burger .modal-content .extras ul{
+	padding: 0;
+	margin: 10px 0px;
+}
+.modal-burger .modal-content .extras ul li{
+	text-decoration: none;
+	padding-top: 8px;
+	display: block;
+}
+.modal-burger .modal-content-info .title {
+	font-size: 2.2rem;
+	text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff,
+		0 0 2rem var(--categorie-burger), 0 0 4rem var(--categorie-burger);
+}
+.modal-burger .modal-content-info .comentario-content .comentario {
+	font-style: italic;
+	border: 1px solid white;
+	border-radius: 5%;
+	padding: 5px;
+}
+.modal-burger .modal-content-info .comentario-content .autor {
+	float: right;
+}
+/* The Close Button */
+.close {
+	width: 100%;
+	text-align: right;
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+/* Add Animation */
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}

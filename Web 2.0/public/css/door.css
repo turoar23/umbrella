@@ -1,0 +1,49 @@
+.backDoor {
+	background-color: black;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	bottom: 0;
+	top: 0;
+	width: 250px;
+	height: 450px;
+
+	margin: auto;
+	margin-top: 150px;
+}
+
+.door {
+	background: url('../img/door.png');
+	background-repeat: no-repeat;
+	background-size: 250px 450px;
+	/*background-color: brown;*/
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 250px;
+	height: 450px;
+	opacity: 0.8;
+
+	transform-origin: left;
+	/*Speed of the Door animation*/
+	transition: all 0.5s ease-in-out;
+}
+.door .logo img {
+	width: 50%;
+	margin-top: 20px;
+}
+.sign{
+	opacity: 1;
+	width: 30%;
+	margin: auto;
+	margin-top: 100px;
+	border-radius: 1%;
+}
+.doorOpen {
+	/*prespectiv creates the door open effect*/
+	transform: perspective(1200px) translateZ(0px) translateX(0px)
+		translateY(0px) rotateY(20deg);
+}

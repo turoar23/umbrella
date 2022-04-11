@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umbrella SH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/burger-style.css">
+    <link rel="stylesheet" media="(max-width:599px)" href="css/styles-small.css">
+    <link rel="stylesheet" media="(min-width:600px)" href="css/styles-large.css">
+
+    <link rel="stylesheet" href="css/rain.css">
+
+</head>
+
+<body class="body-index back-row-toggle splat-toggle">
+    <div class="rain front-row"></div>
+    <div class="rain back-row"></div>
+    
+    <!-- Version escritorio/barra movil -->
+    <nav class="navbar" style="padding: 20px;">
+        <a href="/carta" class="nav-item">Carta</a>
+        <a href="/" class="nav-item">Pedir para casa</a>
+        <a href="/" class="nav-item">Recoger</a>
+        <span class="navbar-toggler nav-item icon icon-custom" onclick="toggleNav()">
+            <div class="plate plate5" onclick="this.classList.toggle('active')">
+                <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                    <path class="line line1" d="M 30,35 H 70 " />
+                    <path class="line line2" d="M 50,50 H 30 L 34,32" />
+                    <path class="line line3" d="M 50,50 H 70 L 66,68" />
+                    <path class="line line4" d="M 30,65 H 70 " />
+                </svg>
+                <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                    <path class="line" d="M 34,32 L 66,68" />
+                    <path class="line" d="M 66,32 L 34,68" />
+                </svg>
+            </div>
+        </span>
+        <!-- <span class="navbar-toggler nav-item icon" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
+        </span> -->
+        <a href="" class="nav-item icon">
+            <!-- <i class="fas fa-motorcycle"></i> -->
+            <div class="btn-order-nav">PIDE YA</div>
+            <!-- <i class="fas fa-shopping-bag"></i> -->
+        </a>
+    </nav>
+
+    <!-- Barra de navegacion oculta -->
+    <div id="mySidenav" class="sidenav">
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a> -->
+        <a href="carta.html">Carta</a>
+        <a href="/">Pedir para casa</a>
+        <a href="/recoger">Recoger</a>
+        <!-- <div class="footer-header">
+            <a href="https://www.facebook.com/Tepuy.burger/" target="_blank"><span class="fab fa-facebook-f"></span></a>
+            <a href="https://www.instagram.com/tepuy.burger/" target="_blank"><span class="fab fa-instagram"></span></a>
+        </div> -->
+    </div>
+    <main class="main-index">
+        <section class="logo">
+            <img src="img/logo.svg" />
+        </section>
+        <section class="order">
+            <a href="" id="btn-index" class="btn-order btn-order1 btn-neon">Delivery</a>
+            <a href="" id="btn-index" class="btn-order btn-neon">Pick up</a>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/functions.js"></script>
+
+    <script src="js/rain.js"></script>
+
+    <script>
+        
+    </script>
+</body>
+
+</html>

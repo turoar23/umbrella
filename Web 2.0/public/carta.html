@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta | Umbrella SH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/burger-style.css">
+    <link rel="stylesheet" href="css/icons/style.css">
+
+    <link rel="stylesheet" media="(max-width:599px)" href="css/styles-small.css">
+    <link rel="stylesheet" media="(min-width:600px)" href="css/styles-large.css">
+
+    <link rel="stylesheet" href="https://use.typekit.net/cxo2bjf.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-carta">
+        <a href="/" class="nav-item">
+            <img class="logo" src="img/logo.svg" alt="" />
+        </a>
+        <a href="/carta" class="nav-item">Carta</a>
+        <a href="/" class="nav-item">Pedir para casa</a>
+        <a href="/" class="nav-item">Recoger</a>
+        <div>
+            <a href="/" class="img-responsive">
+                <img class="logo" src="img/logo.svg" alt="" />
+            </a>
+            <span class="navbar-toggler nav-item icon icon-custom" onclick="toggleNav()">
+                <div class="plate plate5" onclick="this.classList.toggle('active')">
+                    <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                        <path class="line line1" d="M 30,35 H 70 " />
+                        <path class="line line2" d="M 50,50 H 30 L 34,32" />
+                        <path class="line line3" d="M 50,50 H 70 L 66,68" />
+                        <path class="line line4" d="M 30,65 H 70 " />
+                    </svg>
+                    <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                        <path class="line" d="M 34,32 L 66,68" />
+                        <path class="line" d="M 66,32 L 34,68" />
+                    </svg>
+                </div>
+            </span>
+            <a href="" class="nav-item icon">
+                <div class="btn-order-nav">PIDE YA</div>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Barra de navegacion oculta -->
+    <div id="mySidenav" class="sidenav">
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a> -->
+        <a href="carta.html">Carta</a>
+        <a href="/">Pedir para casa</a>
+        <div>
+            <!-- <img src="./img/FLECHA NUEVO.png" class="nuevo" /> -->
+            <a href="/recoger">Recoger</a>
+        </div>
+        <div class="footer-header">
+            <a href="https://www.facebook.com/Tepuy.burger/" target="_blank"><span class="fab fa-facebook-f"></span></a>
+            <a href="https://www.instagram.com/tepuy.burger/" target="_blank"><span class="fab fa-instagram"></span></a>
+        </div>
+    </div>
+    <!-- Mas info de la carta -->
+    <div id="modal-info" class="modal modal-burger">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-content-info">
+                <div class="title text-neon">Sweet Home Alicante</div>
+                <div class="burger-img">
+                    <img src="img/burgers/sweet_home_alabama.png" alt="">
+                    <!-- <img class="sticker" src="img/stickers/sweet.png" alt=""> -->
+                </div>
+                <!-- <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, eligendi eius non quibusdam esse minima, delectus unde itaque earum natus laborum illo. Nemo voluptatibus facere delectus hic eos recusandae optio.
+                </div> -->
+                <div class="ingredients">
+                    Nuestra burger más popular. Con doble de carne, doble de queso cheddar, nuestra salsa Sweet-Umbrella
+                    y picadito (mezcla de bacon, cebolla y pepinillo)
+                    <p>
+                        Ha llegado a alicante para robarse nuestros corazones
+                    </p>
+                    <div class="price">
+                        <ul>
+                            <li>Pollo: 9,10€</li>
+                            <li>Ternera: 9,30€</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="extras">
+                    <div class="extras-title">Extras</div>
+                    <div>Dale tu toque personal a tu burger añadiendo cualquiera de nuestros extras</div>
+                    <ul>
+                        <li>Gratis: Lechuga, tomate y cebolla (cruda)</li>
+                        <li>0,50€: Cebolla Grill</li>
+                        <li>0,90€: Bacon, Cheddar, huevo frito, jalapeños, pepinillos, aros de cebolla, pico de gallo
+                        </li>
+                        <li>1€: Salsa Sweet-Umbrella, BBQ-Bourbon, Salsa X, Salsa queso cheddar, Salsa Blue-Core y Salsa
+                            MayoPepper</li>
+                    </ul>
+                </div>
+                <div class="comentario-content">
+                    <div class="comentario">
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure rerum odit, aperiam
+                        sunt dolore iusto. Ex, impedit dolorum temporibus libero natus aliquid aspernatur cum aut
+                        dolores odio maiores adipisci!"
+                    </div>
+                    <div class="autor">
+                        @morenito19
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Main content -->
+
+    <main class="main-carta">
+        <section class="nav-categories" id="nav-categories">
+            <div class="categorie" id="nav-burgers" onclick="scrollToCategorie('burgers')">
+                <i class="custom-icon icon-burger active"></i>
+            </div>
+            <div class="categorie" id="nav-sides" onclick="scrollToCategorie('sides')">
+                <i class="custom-icon icon-nachos"></i>
+            </div>
+            <div class="categorie" id="nav-drinks" onclick="scrollToCategorie('drinks')">
+                <i class="custom-icon icon-drink"></i>
+            </div>
+            <div class="categorie" id="nav-desserts" onclick="scrollToCategorie('desserts')">
+                <i class="custom-icon icon-cake"></i>
+            </div>
+        </section>
+        <section class="carta-content">
+            <!-- Burgers -->
+            <div id="burgers">
+                <div class="barra-neon-burger"></div>
+                <h2 class="">BURGERS</h2>
+                <div class="barra-neon-burger"></div>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, eos? Autem perferendis aut
+                    ipsa nihil, iusto temporibus veniam vitae similique ipsam voluptate, sequi laudantium ea, distinctio
+                    minus saepe velit fugit.
+                </p>
+                <div class="carta-item">
+                    <div class="burger-item">
+                        <div class="burger-content">
+                            <div class="burger-img">
+                                <img src="img/burger.jpg" alt="">
+                            </div>
+                            <div class="burger-description">
+                                <div class="title text-neon">Sweet Home Alicante</div>
+                                <div class="ingredients">
+                                    Doble de carne, salsa Sweet-Umbrella, doble de queso cheddar, Picadito: mezcla de
+                                    bacon, pepinillo y cebolla
+                                </div>
+                                <div class="price">
+                                    <i class="fas fa-info-circle" id="myBtn"></i>
+                                    <ul>
+                                        <li>Pollo: 9,10€</li>
+                                        <li>Ternera: 9,30€</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="burger-item">
+                        <div class="burger-content">
+                            <div class="burger-img">
+                                <img src="img/burger.jpg" alt="">
+                            </div>
+                            <div class="burger-description">
+                                <div class="title text-neon">Sweet Home Alicante</div>
+                                <div class="ingredients">
+                                    Doble de carne, salsa Sweet-Umbrella, doble de queso cheddar, Picadito: mezcla de
+                                    bacon, pepinillo y cebolla
+                                </div>
+                                <div class="price">
+                                    <i class="fas fa-info-circle" id="myBtn"></i>
+                                    <ul>
+                                        <li>Pollo: 9,10€</li>
+                                        <li>Ternera: 9,30€</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="burger-item">
+                        <div class="burger-content">
+                            <div class="burger-img">
+                                <img src="img/burger.jpg" alt="">
+                            </div>
+                            <div class="burger-description">
+                                <div class="title text-neon">Sweet Home Alicante</div>
+                                <div class="ingredients">
+                                    Doble de carne, salsa Sweet-Umbrella, doble de queso cheddar, Picadito: mezcla de
+                                    bacon, pepinillo y cebolla
+                                </div>
+                                <div class="price">
+                                    <i class="fas fa-info-circle" id="myBtn"></i>
+                                    <ul>
+                                        <li>Pollo: 9,10€</li>
+                                        <li>Ternera: 9,30€</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="barra-neon-burger"></div> -->
+            </div>
+            <!-- Sides -->
+            <div id="sides">
+                <div class="barra-neon-side"></div>
+                <h2 class="">SIDES</h2>
+                <div class="barra-neon-side"></div>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, eos? Autem perferendis aut
+                    ipsa nihil, iusto temporibus veniam vitae similique ipsam voluptate, sequi laudantium ea,
+                    distinctio
+                    minus saepe velit fugit.
+                </p>
+                <div class="side-list">
+                    <div class="carta-item">
+                        <div class="list-item">
+                            <div class="list-item-name text-neon">Patatas S</div>
+                            <div class="list-item-price">1,50€</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-name text-neon">Patatas L</div>
+                            <div class="list-item-price">2,50€</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-name text-neon">Chicken Tenders</div>
+                            <div class="list-item-price">6,90€</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-name text-neon">Pollo Cajún</div>
+                            <div class="list-item-price">6,90€</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-name text-neon">Alitas</div>
+                            <div class="list-item-price">6,90€</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-name text-neon">Nachos <span class="neon-tepuy">By Tepuy</span></div>
+                            <div class="list-item-price">10,50€</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="barra-neon-side"></div> -->
+            </div>
+            <div id="drinks">
+                <div class="barra-neon-drink"></div>
+                <h2 class="">DRINKS</h2>
+                <div class="barra-neon-drink"></div>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, eos? Autem perferendis aut
+                    ipsa nihil, iusto temporibus veniam vitae similique ipsam voluptate, sequi laudantium ea,
+                    distinctio
+                    minus saepe velit fugit.
+                </p>
+                <div class="side-list">
+                    <div class="carta-item ">
+                        <div class="list-item">
+                            <div class="list-item-name text-neon">Patatas S</div>
+                            <div class="list-item-price">1,50€</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-name text-neon">Patatas L</div>
+                            <div class="list-item-price">2,50€</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-name text-neon">Chicken Tenders</div>
+                            <div class="list-item-price">6,90€</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-name text-neon">Pollo Cajún</div>
+                            <div class="list-item-price">6,90€</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-name text-neon">Alitas</div>
+                            <div class="list-item-price">6,90€</div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-name text-neon">Nachos<sup>by Tepuy</sup></div>
+                            <div class="list-item-price">10,50€</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="desserts"></div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/functions.js"></script>
+    <script>
+
+        if (screen.width <= 600) {
+            window.onscroll = function () {
+                myFunction()
+                changeNeon()
+            };
+        }
+        var isSticky = false;
+
+        var navbar = document.getElementById("nav-categories");
+        var sticky = navbar.offsetTop - 18;
+
+        // var burgers = document.getElementById("burgers");
+        var sides = document.getElementById("sides");
+        var drinks = document.getElementById("drinks");
+        var desserts = document.getElementById("desserts");
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+                isSticky = true;
+            } else {
+                navbar.classList.remove("sticky");
+                isSticky = false;
+            }
+        }
+        function changeNeon() {
+            let position = window.pageYOffset + (window.outerHeight * 0.3);
+
+            if (position <= sides.offsetTop) {
+                $(navbar.querySelectorAll('i')).removeClass("active");
+                $(navbar.querySelector('#nav-burgers').querySelector('i')).addClass("active");
+            } else if (position <= drinks.offsetTop) {
+                $(navbar.querySelectorAll('i')).removeClass("active");
+                $(navbar.querySelector('#nav-sides').querySelector('i')).addClass("active");
+            }
+            else if (position <= desserts.offsetTop) {
+                $(navbar.querySelectorAll('i')).removeClass("active");
+                $(navbar.querySelector('#nav-drinks').querySelector('i')).addClass("active");
+            }
+            else {
+                $(navbar.querySelectorAll('i')).removeClass("active");
+                $(navbar.querySelector('#nav-desserts').querySelector('i')).addClass("active");
+            }
+        }
+        function scrollToCategorie(place) {
+            let placeTo = document.getElementById(place);
+            // window.scroll(0, placeTo.offsetTop - navbar.offsetHeight,'smooth');
+            var navbarSize = !isSticky ? navbar.offsetHeight * 3 : navbar.offsetHeight;
+            window.scroll({
+                top: placeTo.offsetTop - navbarSize,
+                left: 0,
+                behavior: 'smooth'
+            })
+        }
+        // Get the modal
+        var modal = document.getElementById("modal-info");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
