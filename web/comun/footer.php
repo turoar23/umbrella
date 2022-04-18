@@ -9,6 +9,9 @@
     <div>
         <ul>
             <li>
+                <a href="/documents/alergenos.pdf" target="_blank" rel="nofollow">Alérgenos</a>
+            </li>
+            <li>
                 <a href="/documents/politica_privacidad.pdf" target="_blank" rel="nofollow">Politica de Privacidad</a>
             </li>
             <li>
